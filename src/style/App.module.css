@@ -1,0 +1,250 @@
+@media (max-width: 620px) {
+    .popular_categories{
+        grid-template-columns: 1fr!important;
+        grid-template-rows: repeat(6, 1fr) !important;
+    }
+    .adventure, .fantasy, .horror, .shooters, .comedians, .superheros{
+        grid-column: span 1!important;
+        grid-row: span 1!important;
+    }
+    .textarea, .send{
+        grid-column: span 1!important;
+    }
+    .send{
+        width: 100% !important;
+    }
+    .form{
+        grid-template-columns: 1fr!important;
+        grid-template-rows: repeat(6, auto) !important;
+    }
+}
+@media (min-width: 620px) and (max-width: 1100px){
+    .popular_categories{
+        grid-template-columns: repeat(2, 1fr)!important;
+        grid-template-rows: repeat(3, 1fr) !important;
+    }
+    .adventure, .horror, .shooters, .comedians, .superheros{
+        grid-column: span 1!important;
+        grid-row: span 1!important;
+    }
+    .fantasy{
+        grid-column: span 2!important;
+        grid-row: span 1!important;
+    }
+}
+@media(max-width: 900px){
+    .image_container{
+        width: 100% !important;
+    }
+    .image_container:hover > .sub {
+        transform: translateY(0)!important;
+    }
+    .image_container:hover:before {
+        opacity: 0!important;
+    }
+    .quote{
+        flex-direction: column;
+        height: auto!important;
+    }
+
+    .quote > img {
+        width: 100% !important;
+    }
+    .aside{
+        margin-top: 1rem;
+        width: 100% !important;
+        border-left: none!important;
+        border-top: 3px solid var(--primary-black);
+        padding: 5% 5%;
+        text-align: center;
+    }
+    .circle_img {
+        margin: 0 auto!important;
+      width: 150px!important;
+      height: 150px!important;
+    }
+    .list{
+        flex-direction: column;
+        gap:2rem;
+    }
+    .sub{
+        opacity: 1!important;
+        height: 5rem;
+        position: absolute;
+        width: 100%;
+        bottom:0;
+    }
+}
+.feedback{
+    margin: 2rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.textarea,.send{
+    grid-column: span 2;
+}
+.send{
+    margin: 0 auto;
+    width: 50%;
+}
+.form{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 1rem;
+}
+span{
+    color: var(--secondary-purple)!important;
+}
+.center_block{
+    text-align: center;
+    margin-top: 2rem;
+}
+.popular_categories{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+}
+.image_container {
+  height: 20rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px var(--primary-black);
+  position: relative;
+    transition: 300ms;
+    filter: blur(0);
+}
+.superheros{
+    grid-column: span 2;
+}
+.fantasy{
+    grid-column: span 3;
+}
+.adventure, .comedians{
+    height: auto;
+    grid-row: span 2;
+}
+.hovered {
+    filter: blur(3px);
+}
+.image_container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image_container:hover{
+    transform: scale(1.05);
+    transition: 300ms;
+    cursor: pointer;
+}
+.image_container:hover > .sub {
+    transform: translateY(-5rem);
+    opacity: 1;
+    cursor: pointer;
+}
+.sub{
+    color: var(--accent-bright-yellow);
+    text-align: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    height: 5rem;
+    background: linear-gradient(to top, rgba(128, 128, 128, 1), rgba(128, 128, 128, 0));
+}
+.quote{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.quote > img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px var(--primary-black);
+}
+
+.aside{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid var(--primary-black);
+    padding: 5% 5%;
+    text-align: center;
+}
+
+.circle_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+    box-shadow: 0 2px 4px var(--primary-black);
+}
+
+.circle_img:hover{
+    cursor: pointer;
+}
+
+.circle_img > img {
+    height: 100%;
+    object-fit: cover;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+}
+.companyName{
+    margin-top: 1rem;
+}
+
+.video_container {
+      position: relative;
+      width: 50%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+.video_container iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video_container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video_container:hover::before {
+    opacity: 1;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--accent-bright-yellow);
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.video_container:hover .text {
+    transform: translateY(0);
+}

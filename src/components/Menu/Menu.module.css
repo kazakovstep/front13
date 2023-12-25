@@ -1,0 +1,36 @@
+@media (max-width: 385px) {
+    .catalog{
+        flex-direction: column;
+    }
+}
+.img{
+    transition: 300ms;
+    transform: rotate(180deg);
+}
+.img_clicked{
+    transition: 300ms;
+}
+.menu{
+    height: auto;
+    padding: 1rem 1rem;
+    background: var(--primary-black);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 3.5rem;
+    width: 100%;
+    left: 0;
+}
+.catalog{
+    margin-top: 13rem!important;
+}
+.input{
+    justify-content: space-around;
+    width: 100% !important;
+}
+.addButton{
+    width: 90%!important;
+    padding: 0.5rem!important;
+    margin: 1rem auto;
+}

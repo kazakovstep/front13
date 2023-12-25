@@ -1,0 +1,97 @@
+.button {
+    display: flex;
+    padding: 0.75rem 2.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 3.5rem;
+    border: none;
+    width: 100%;
+}
+
+.default {
+    color: var(--primary-black);
+    transition: 300ms;
+}
+
+.click,
+.default:hover {
+    background: var(--primary-black);
+    color: var(--accent-bright-yellow);
+    cursor: pointer;
+}
+
+.click {
+    color: var(--primary-white);
+}
+
+.disabled.primary {
+    background: var(--primary-dark-grey);
+    color: var(--primary-white);
+}
+
+
+.disabled.secondary {
+    color: var(--primary-dark-grey);
+}
+
+.primary,
+.secondary,
+.hover,
+.click {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.25rem;
+}
+
+.primary {
+    background: var(--accent-bright-yellow);
+}
+
+.secondary {
+    background: var(--primary-white);
+}
+
+.text {
+    background: none !important;
+    text-decoration: underline 0.125rem var(--secondary-pink);
+    text-underline-offset: 5px;
+}
+
+.text, .back{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5rem;
+    width: fit-content;
+    padding: 0.25rem !important;
+}
+
+.default .text{
+    transition: 300ms;
+}
+
+.text .hover,
+.text:hover {
+    text-decoration-color: var(--secondary-purple);
+    color: var(--primary-black);
+}
+
+.text .disabled {
+    color: var(--primary-dark-grey);
+    text-decoration-color: var(--primary-dark-grey);
+}
+
+.back{
+    background: none !important;
+    transition: 300ms;
+}
+
+.back:hover{
+    color: var(--primary-black) !important;
+}
+
